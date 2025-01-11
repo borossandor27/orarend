@@ -3,7 +3,7 @@ Iskola rendszerű képzésben személyi vagy technikai változások esetén a v�
 
 # Esemény - ami miatt órarendet kell változtatni 
 - Tanár lehet akadályoztatva az óra megtartásában. Betegség, továbbképzés, ...
-- Technikai akadályok miatt (pl.: átalakítás, beázás, ablak kitörik, rendezvény, ...) termek válhatnak használhatatlanná 
+- Technikai akadályok miatt termek válhatnak használhatatlanná (pl.: átalakítás, beázás, ablak kitörik, rendezvény, ...)  
 
 # Egyedek
 ## Tanár

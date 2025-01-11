@@ -28,3 +28,9 @@ nav ul li a{
     color: white;
     text-decoration: none;
 }
+
+.orarendTable{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px auto;
+}
