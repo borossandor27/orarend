@@ -1,0 +1,161 @@
+﻿1/9/E
+2/10/E
+2/10/F
+3/11/E
+9/A
+9/B
+9/C
+9/D
+10/A
+10/B
+10/C
+11/A
+11/AH
+11/B
+11/BH
+11/C
+12/A
+12/AH
+12/B
+12/BH
+12/C
+13/A
+13/AH
+13/B
+13/BH
+13/C
+
+
+Csoport
+ 1/9e_1 - Iskolai csoport (tanórai célú)
+ 1/9e_2 - Iskolai csoport (tanórai célú)
+ 9a_szakma_1 - Iskolai csoport (tanórai célú)
+ 9a_szakma_2 - Iskolai csoport (tanórai célú)
+ 9ab_(második idegen nyelv)_német_1 - Iskolai csoport (tanórai célú)
+ 9ab_(második idegen nyelv)_német_2 - Iskolai csoport (tanórai célú)
+ 9ab_(második idegen nyelv)_német_3 - Iskolai csoport (tanórai célú)
+ 9ab_1.idegen nyelv _angol_1 - Iskolai csoport (tanórai célú)
+ 9ab_1.idegen nyelv _angol_2 - Iskolai csoport (tanórai célú)
+ 9ab_1.idegen nyelv _angol_3 - Iskolai csoport (tanórai célú)
+ 9ab_1.idegen nyelv _angol_4 - Iskolai csoport (tanórai célú)
+ 9ab_kompetenciafejlesztés_(második idegen nyelv helyett) - Iskolai csoport (tanórai célú)
+ 9b_szakma_1 - Iskolai csoport (tanórai célú)
+ 9b_szakma_2 - Iskolai csoport (tanórai célú)
+ 9c_szakma_1 - Iskolai csoport (tanórai célú)
+ 9c_szakma_2 - Iskolai csoport (tanórai célú)
+ 9cd_(második idegen nyelv)_német_1 - Iskolai csoport (tanórai célú)
+ 9cd_(második idegen nyelv)_német_2 - Iskolai csoport (tanórai célú)
+ 9cd_(második idegen nyelv)_német_3 - Iskolai csoport (tanórai célú)
+ 9cd_1.idegen nyelv _angol_1 - Iskolai csoport (tanórai célú)
+ 9cd_1.idegen nyelv _angol_2 - Iskolai csoport (tanórai célú)
+ 9cd_1.idegen nyelv _angol_3 - Iskolai csoport (tanórai célú)
+ 9cd_1.idegen nyelv _angol_4 - Iskolai csoport (tanórai célú)
+ 9cd_kompetenciafejlesztés_(második idegen nyelv helyett) - Iskolai csoport (tanórai célú)
+ 9d_szakma_1 - Iskolai csoport (tanórai célú)
+ 9d_szakma_2 - Iskolai csoport (tanórai célú)
+ 10a_szakma_1 - Iskolai csoport (tanórai célú)
+ 10a_szakma_2 - Iskolai csoport (tanórai célú)
+ 10abc_(második idegen nyelv)_német_1 - Iskolai csoport (tanórai célú)
+ 10abc_(második idegen nyelv)_német_2 - Iskolai csoport (tanórai célú)
+ 10abc_(második idegen nyelv)_német_3 - Iskolai csoport (tanórai célú)
+ 10abc_(második idegen nyelv)_német_4 - Iskolai csoport (tanórai célú)
+ 10abc_1.idegen nyelv _ angol 1 - Iskolai csoport (tanórai célú)
+ 10abc_1.idegen nyelv _ angol 2 - Iskolai csoport (tanórai célú)
+ 10abc_1.idegen nyelv _ angol 3 - Iskolai csoport (tanórai célú)
+ 10abc_1.idegen nyelv _ angol 4 - Iskolai csoport (tanórai célú)
+ 10abc_1.idegen nyelv _ angol 5 - Iskolai csoport (tanórai célú)
+ 10abc_1.idegen nyelv _ angol 6 - Iskolai csoport (tanórai célú)
+ 10abc_kompetenciafejlesztés _ 1_(második idegen nyelv helyett) - Iskolai csoport (tanórai )
+ 10abc_kompetenciafejlesztés_ 2_(második idegen nyelv helyett) - Iskolai csoport (tanórai célú)
+ 10b_szakma_1 - Iskolai csoport (tanórai célú)
+ 10b_szakma_2 - Iskolai csoport (tanórai célú)
+ 10c_szakma_1 - Iskolai csoport (tanórai célú)
+ 10c_szakma_2 - Iskolai csoport (tanórai célú)
+ 11a_1 - Iskolai csoport (tanórai célú)
+ 11a_2 - Iskolai csoport (tanórai célú)
+ 11a_ah_bh_(második idegen nyelv)_német_1 - Iskolai csoport (tanórai célú)
+ 11a_ah_bh_(második idegen nyelv)_német_2 - Iskolai csoport (tanórai célú)
+ 11a_ah_bh_(második idegen nyelv)_német_3 - Iskolai csoport (tanórai célú)
+ 11a_ah_bh_(második idegen nyelv)_német_4 - Iskolai csoport (tanórai célú)
+ 11a_ah_bh_földrajz_(második idegen nyelv helyett) - Iskolai csoport (tanórai célú)
+ 11abh_1.idegen nyelv _angol_1 - Iskolai csoport (tanórai célú)
+ 11abh_1.idegen nyelv _angol_2 - Iskolai csoport (tanórai célú)
+ 11abh_1.idegen nyelv _angol_3 - Iskolai csoport (tanórai célú)
+ 11abh_1.idegen nyelv _angol_4 - Iskolai csoport (tanórai célú)
+ 11ah_szakma_1 - Iskolai csoport (tanórai célú)
+ 11ah_szakma_2 - Iskolai csoport (tanórai célú)
+ 11b_1 - Iskolai csoport (tanórai célú)
+ 11b_2 - Iskolai csoport (tanórai célú)
+ 11bh_szakma_1 - Iskolai csoport (tanórai célú)
+ 11bh_szakma_2 - Iskolai csoport (tanórai célú)
+ 11c_1 - Iskolai csoport (tanórai célú)
+ 11c_2 - Iskolai csoport (tanórai célú)
+ 12a_1 - Iskolai csoport (tanórai célú)
+ 12a_2 - Iskolai csoport (tanórai célú)
+ 12abh_(második idegen nyelv)_német_1 - Iskolai csoport (tanórai célú)
+ 12abh_(második idegen nyelv)_német_2 - Iskolai csoport (tanórai célú)
+ 12abh_(második idegen nyelv)_német_3 - Iskolai csoport (tanórai célú)
+ 12abh_1.idegen nyelv _angol_1 - Iskolai csoport (tanórai célú)
+ 12abh_1.idegen nyelv _angol_2 - Iskolai csoport (tanórai célú)
+ 12abh_1.idegen nyelv _angol_3 - Iskolai csoport (tanórai célú)
+ 12abh_1.idegen nyelv _angol_4 - Iskolai csoport (tanórai célú)
+ 12abh_földrajz_(második idegen nyelv helyett) - Iskolai csoport (tanórai célú)
+ 12ah_szakma_1 - Iskolai csoport (tanórai célú)
+ 12ah_szakma_2 - Iskolai csoport (tanórai célú)
+ 12b_1 - Iskolai csoport (tanórai célú)
+ 12b_2 - Iskolai csoport (tanórai célú)
+ 12bh_szakma_1 - Iskolai csoport (tanórai célú)
+ 12bh_szakma_2 - Iskolai csoport (tanórai célú)
+ 12c_1 - Iskolai csoport (tanórai célú)
+ 12c_2 - Iskolai csoport (tanórai célú)
+ 13/a_ah_1 - Iskolai csoport (tanórai célú)
+ 13/a_ah_2 - Iskolai csoport (tanórai célú)
+ 13_bh_1 - Iskolai csoport (tanórai célú)
+ 13_bh_2 - Iskolai csoport (tanórai célú)
+ 13_vizsgafelk_magyar nyelv és irodalom_1 - Iskolai csoport (tanórai célú)
+ 13_vizsgafelk_magyar nyelv és irodalom_2 - Iskolai csoport (tanórai célú)
+ 13_vizsgafelk_magyar nyelv és irodalom_3 - Iskolai csoport (tanórai célú)
+ 13_vizsgafelk_magyar nyelv és irodalom_4 - Iskolai csoport (tanórai célú)
+ 13_vizsgafelk_magyar nyelv és irodalom_5 - Iskolai csoport (tanórai célú)
+ 13_vizsgafelk_magyar nyelv és irodalom_6 - Iskolai csoport (tanórai célú)
+ 13_vizsgafelk_magyar nyelv és irodalom_7 - Iskolai csoport (tanórai célú)
+ 13_vizsgafelk_magyar nyelv és irodalom_8 - Iskolai csoport (tanórai célú)
+ 13_vizsgafelk_matematika_1 - Iskolai csoport (tanórai célú)
+ 13_vizsgafelk_matematika_2 - Iskolai csoport (tanórai célú)
+ 13_vizsgafelk_matematika_3 - Iskolai csoport (tanórai célú)
+ 13_vizsgafelk_matematika_4 - Iskolai csoport (tanórai célú)
+ 13_vizsgafelk_matematika_5 - Iskolai csoport (tanórai célú)
+ 13_vizsgafelk_matematika_6 - Iskolai csoport (tanórai célú)
+ 13_vizsgafelk_matematika_7 - Iskolai csoport (tanórai célú)
+ 13_vizsgafelk_matematika_8 - Iskolai csoport (tanórai célú)
+ 13_vizsgafelk_történelem_1 - Iskolai csoport (tanórai célú)
+ 13_vizsgafelk_történelem_2 - Iskolai csoport (tanórai célú)
+ 13_vizsgafelk_történelem_3 - Iskolai csoport (tanórai célú)
+ 13_vizsgafelk_történelem_4 - Iskolai csoport (tanórai célú)
+ 13_vizsgafelk_történelem_5 - Iskolai csoport (tanórai célú)
+ 13_vizsgafelk_történelem_6 - Iskolai csoport (tanórai célú)
+ 13_vizsgafelk_történelem_7 - Iskolai csoport (tanórai célú)
+ 13_vizsgafelk_történelem_8 - Iskolai csoport (tanórai célú)
+ 13b_1 - Iskolai csoport (tanórai célú)
+ 13b_2 - Iskolai csoport (tanórai célú)
+ Egyetemi felkészítő történelemből - Fakultációs csoport
+ Erasmus kiküldetés Törökország 2024.12.01-07. - Na
+ gyógypedagógiai fogl_SNI_BTMN_1/9/E - Fejlesztő foglalkozási csoport
+ gyógypedagógiai fogl_SNI_BTMN_10/A - Fejlesztő foglalkozási csoport
+ gyógypedagógiai fogl_SNI_BTMN_10/B - Fejlesztő foglalkozási csoport
+ gyógypedagógiai fogl_SNI_BTMN_10/C - Fejlesztő foglalkozási csoport
+ gyógypedagógiai fogl_SNI_BTMN_11/A - Fejlesztő foglalkozási csoport
+ gyógypedagógiai fogl_SNI_BTMN_11/B - Fejlesztő foglalkozási csoport
+ gyógypedagógiai fogl_SNI_BTMN_11/BH - Fejlesztő foglalkozási csoport
+ gyógypedagógiai fogl_SNI_BTMN_11/C - Fejlesztő foglalkozási csoport
+ gyógypedagógiai fogl_SNI_BTMN_12/A - Fejlesztő foglalkozási csoport
+ gyógypedagógiai fogl_SNI_BTMN_12/AH - Fejlesztő foglalkozási csoport
+ gyógypedagógiai fogl_SNI_BTMN_12/C - Fejlesztő foglalkozási csoport
+ gyógypedagógiai fogl_SNI_BTMN_2/10/E - Fejlesztő foglalkozási csoport
+ gyógypedagógiai fogl_SNI_BTMN_2/10/F - Fejlesztő foglalkozási csoport
+ gyógypedagógiai fogl_SNI_BTMN_9/B - Fejlesztő foglalkozási csoport
+ gyógypedagógiai fogl_SNI_BTMN_9/D - Fejlesztő foglalkozási csoport
+ vizsgafelkészítő/informatika_13. évfolyamon - Iskolai csoport (tanórai célú)
+ vizsgafelkészítő/kereskedelem_A_AH_13. évfolyamon - Iskolai csoport (tanórai célú)
+ vizsgafelkészítő/kereskedelem_BH_13. évfolyamon - Iskolai csoport (tanórai célú)
+ vizsgafelkészítő/logisztika_13. évfolyamon - Iskolai csoport (tanórai célú)
