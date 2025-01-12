@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2025. Jan 12. 21:23
+-- Létrehozás ideje: 2025. Jan 12. 21:03
 -- Kiszolgáló verziója: 10.4.32-MariaDB
 -- PHP verzió: 8.2.12
 
@@ -1437,9 +1437,18 @@ CREATE TABLE `tanorak` (
 ,`tanarId` bigint(20) unsigned
 ,`nev` varchar(255)
 ,`kod` varchar(255)
+,`email` varchar(255)
 ,`hetnapja` bigint(20) unsigned
+,`evfolyam` bigint(20) unsigned
 ,`megnevezes` varchar(255)
+,`csoport` enum('TRUE','FALSE')
+,`osztalyfonokId` bigint(20) unsigned
 ,`teremkod` varchar(255)
+,`projektor` enum('TRUE','FALSE')
+,`infotrerem` enum('TRUE','FALSE')
+,`ferohely` int(3) unsigned
+,`orakezdes` time
+,`oravege` time
 ,`tantargyneve` varchar(255)
 ,`tantargykod` varchar(255)
 );
@@ -1663,7 +1672,7 @@ INSERT INTO `terem` (`teremId`, `teremkod`, `projektor`, `infotrerem`, `ferohely
 --
 DROP TABLE IF EXISTS `tanorak`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `tanorak`  AS SELECT `t`.`tantargyId` AS `tantargyId`, `t`.`oraszam` AS `oraszam`, `t`.`teremId` AS `teremId`, `t`.`osztalyId` AS `osztalyId`, `t`.`tanarId` AS `tanarId`, `ta`.`nev` AS `nev`, `ta`.`kod` AS `kod`, `t`.`hetnapja` AS `hetnapja`, `o`.`megnevezes` AS `megnevezes`, `r`.`teremkod` AS `teremkod`, `tg`.`tantargyneve` AS `tantargyneve`, `tg`.`tantargykod` AS `tantargykod` FROM ((((`tanora` `t` join `tanar` `ta` on(`t`.`tanarId` = `ta`.`tanarId`)) join `osztalyok` `o` on(`t`.`osztalyId` = `o`.`osztalyId`)) join `terem` `r` on(`t`.`teremId` = `r`.`teremId`)) join `tantargy` `tg` on(`t`.`tantargyId` = `tg`.`tantargyId`)) ORDER BY `t`.`hetnapja` ASC, `t`.`oraszam` ASC ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `tanorak`  AS SELECT `t`.`tantargyId` AS `tantargyId`, `t`.`oraszam` AS `oraszam`, `t`.`teremId` AS `teremId`, `t`.`osztalyId` AS `osztalyId`, `t`.`tanarId` AS `tanarId`, `ta`.`nev` AS `nev`, `ta`.`kod` AS `kod`, `ta`.`email` AS `email`, `t`.`hetnapja` AS `hetnapja`, `o`.`evfolyam` AS `evfolyam`, `o`.`megnevezes` AS `megnevezes`, `o`.`csoport` AS `csoport`, `o`.`osztalyfonokId` AS `osztalyfonokId`, `r`.`teremkod` AS `teremkod`, `r`.`projektor` AS `projektor`, `r`.`infotrerem` AS `infotrerem`, `r`.`ferohely` AS `ferohely`, `orak`.`orakezdes` AS `orakezdes`, `orak`.`oravege` AS `oravege`, `tg`.`tantargyneve` AS `tantargyneve`, `tg`.`tantargykod` AS `tantargykod` FROM (((((`tanora` `t` join `tanar` `ta` on(`t`.`tanarId` = `ta`.`tanarId`)) join `osztalyok` `o` on(`t`.`osztalyId` = `o`.`osztalyId`)) join `terem` `r` on(`t`.`teremId` = `r`.`teremId`)) join `orak` on(`t`.`oraszam` = `orak`.`oraszam`)) join `tantargy` `tg` on(`t`.`tantargyId` = `tg`.`tantargyId`)) WHERE `t`.`hetnapja` between 1 and 5 ORDER BY `t`.`hetnapja` ASC, `t`.`oraszam` ASC ;
 
 --
 -- Indexek a kiírt táblákhoz

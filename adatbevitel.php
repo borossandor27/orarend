@@ -21,8 +21,7 @@ if (isset($_POST["tanarId"]) && isset($_POST["tantereId"]) && isset($_POST["kezd
     $veg = date("Y-m-d H:i:s", strtotime($_POST["veg"]));
     $leiras = htmlspecialchars($_POST["leiras"]);
     echo $tanarId . " " . $tantereId . " " . $kezdet . " " . $veg . " " . $leiras;
-    $sql = "INSERT INTO `esemeny` (`erintettTanarId`, `erintettTeremId`, `kezdete`, `vege`, `megjegyzes`) VALUES ('$tanarId', '$tantereId', '$kezdet'), '$veg', '$leiras')";
-    if ($db->insert($sql)) {
+    if ($db->setEsemeny($tanarId, $tantereId, $kezdet, $veg, $leiras)) {
         echo "Sikeres rögzítés!";
     } else {
         echo "Sikertelen rögzítés!";

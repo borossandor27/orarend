@@ -38,6 +38,11 @@ class Database
             return false;
         }
     }
+    public function setEsemeny($tanarId, $tantereId, $kezdet, $veg, $leiras)
+    {
+        $sql = "INSERT INTO `esemeny` (`erintettTanarId`, `erintettTeremId`, `kezdete`, `vege`, `megjegyzes`) VALUES ('$tanarId', '$tantereId', '$kezdet', '$veg', '$leiras')";
+        return $this->insert($sql);
+    }
     private function select($sql)
     {
         $result = $this->conn->query($sql);
