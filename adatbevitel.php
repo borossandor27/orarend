@@ -9,10 +9,10 @@
 </form>
 <?php
 
-//$tanarok = $db->getTanarok();
+$tanarok = $db->getTanarok();
 //$osztalyok = $db->getOsztalyok();
 //$tantargyak = $db->getTantargyak();
-//$tantermek = $db->getTantermek();
+$tantermek = $db->getTantermek();
 //$esemenyek = $db->getEsemenyek();
 if (isset($_POST["tanarId"]) && isset($_POST["tantereId"]) && isset($_POST["kezdet"]) && isset($_POST["veg"]) && isset($_POST["leiras"])) {
     $tanarId = filter_input(INPUT_POST, "tanarId", FILTER_VALIDATE_INT);
