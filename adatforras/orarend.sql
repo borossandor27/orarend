@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2025. Jan 11. 22:28
+-- Létrehozás ideje: 2025. Jan 12. 12:01
 -- Kiszolgáló verziója: 10.4.32-MariaDB
 -- PHP verzió: 8.2.12
 
@@ -33,10 +33,17 @@ USE `orarend`;
 CREATE TABLE `esemeny` (
   `erintettTanarId` bigint(20) UNSIGNED DEFAULT NULL,
   `erintettTeremId` bigint(20) UNSIGNED DEFAULT NULL,
-  `kezdete` time NOT NULL,
-  `vege` time NOT NULL,
+  `kezdete` datetime NOT NULL,
+  `vege` datetime NOT NULL,
   `megjegyzes` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- A tábla adatainak kiíratása `esemeny`
+--
+
+INSERT INTO `esemeny` (`erintettTanarId`, `erintettTeremId`, `kezdete`, `vege`, `megjegyzes`) VALUES
+(20, 1, '2025-01-11 23:24:15', '2025-01-11 23:24:15', 'beteg lett');
 
 -- --------------------------------------------------------
 
@@ -46,15 +53,15 @@ CREATE TABLE `esemeny` (
 
 CREATE TABLE `orak` (
   `oraszam` bigint(20) UNSIGNED NOT NULL,
-  `kezdes` time DEFAULT NULL,
-  `befejezes` time DEFAULT NULL
+  `orakezdes` time NOT NULL,
+  `oravege` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- A tábla adatainak kiíratása `orak`
 --
 
-INSERT INTO `orak` (`oraszam`, `kezdes`, `befejezes`) VALUES
+INSERT INTO `orak` (`oraszam`, `orakezdes`, `oravege`) VALUES
 (1, '08:00:00', '08:45:00'),
 (2, '08:55:00', '09:40:00'),
 (3, '09:50:00', '10:35:00'),
@@ -1424,15 +1431,15 @@ INSERT INTO `tanora` (`hetnapja`, `oraszam`, `tanarId`, `teremId`, `osztalyId`, 
 
 CREATE TABLE `tantargy` (
   `tantargyId` bigint(20) UNSIGNED NOT NULL,
-  `megnevezes` varchar(255) NOT NULL,
-  `kod` varchar(255) NOT NULL
+  `tantargyneve` varchar(255) NOT NULL,
+  `tantargykod` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- A tábla adatainak kiíratása `tantargy`
 --
 
-INSERT INTO `tantargy` (`tantargyId`, `megnevezes`, `kod`) VALUES
+INSERT INTO `tantargy` (`tantargyId`, `tantargyneve`, `tantargykod`) VALUES
 (1, 'asztali alkalmazások fejlesztése', 'aaf'),
 (2, 'asztali alkalmazások fejlesztése és tesztelése', 'aafét'),
 (3, 'adatbázis-kezelés I', 'adatI'),
@@ -1596,9 +1603,9 @@ INSERT INTO `tanulo` (`tanuloId`, `nev`, `email`, `megjegyzes`) VALUES
 
 CREATE TABLE `terem` (
   `teremId` bigint(20) UNSIGNED NOT NULL,
-  `kod` varchar(255) NOT NULL,
+  `teremkod` varchar(255) NOT NULL,
   `projektor` enum('TRUE','FALSE') NOT NULL DEFAULT 'TRUE',
-  `info` enum('TRUE','FALSE') NOT NULL DEFAULT 'FALSE',
+  `infotrerem` enum('TRUE','FALSE') NOT NULL DEFAULT 'FALSE',
   `ferohely` int(3) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -1606,7 +1613,7 @@ CREATE TABLE `terem` (
 -- A tábla adatainak kiíratása `terem`
 --
 
-INSERT INTO `terem` (`teremId`, `kod`, `projektor`, `info`, `ferohely`) VALUES
+INSERT INTO `terem` (`teremId`, `teremkod`, `projektor`, `infotrerem`, `ferohely`) VALUES
 (1, '101', 'TRUE', 'FALSE', 30),
 (2, '102', 'TRUE', 'TRUE', 25),
 (3, '103', 'FALSE', 'FALSE', 20),
