@@ -3,11 +3,10 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2025. Jan 12. 21:23
+-- Létrehozás ideje: 2025. Jan 13. 14:10
 -- Kiszolgáló verziója: 10.4.32-MariaDB
 -- PHP verzió: 8.2.12
 
-SET FOREIGN_KEY_CHECKS=0;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -43,7 +42,10 @@ CREATE TABLE `esemeny` (
 --
 
 INSERT INTO `esemeny` (`erintettTanarId`, `erintettTeremId`, `kezdete`, `vege`, `megjegyzes`) VALUES
-(20, 1, '2025-01-11 23:24:15', '2025-01-11 23:24:15', 'beteg lett');
+(20, 1, '2025-01-11 23:24:15', '2025-01-11 23:24:15', 'beteg lett'),
+(19, 19, '2025-01-13 11:48:00', '2025-01-13 11:48:00', 'asdgdhh'),
+(19, 19, '2025-01-13 11:48:00', '2025-01-13 11:48:00', 'asdgdhh'),
+(2, 3, '2025-01-14 11:50:00', '2025-01-22 11:50:00', '');
 
 -- --------------------------------------------------------
 
@@ -375,8 +377,8 @@ INSERT INTO `osztalyok` (`osztalyId`, `evfolyam`, `megnevezes`, `csoport`, `oszt
 
 CREATE TABLE `tanar` (
   `tanarId` bigint(20) UNSIGNED NOT NULL,
-  `nev` varchar(255) NOT NULL,
-  `kod` varchar(255) NOT NULL,
+  `tanarnev` varchar(255) NOT NULL,
+  `tanarkod` varchar(255) NOT NULL,
   `email` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -384,7 +386,7 @@ CREATE TABLE `tanar` (
 -- A tábla adatainak kiíratása `tanar`
 --
 
-INSERT INTO `tanar` (`tanarId`, `nev`, `kod`, `email`) VALUES
+INSERT INTO `tanar` (`tanarId`, `tanarnev`, `tanarkod`, `email`) VALUES
 (1, 'Kovács Péter', 'T001', 'kovacs.peter@example.com'),
 (2, 'Nagy Anna', 'T002', 'nagy.anna@example.com'),
 (3, 'Szabó Gábor', 'T003', 'szabo.gabor@example.com'),
@@ -1435,11 +1437,18 @@ CREATE TABLE `tanorak` (
 ,`teremId` bigint(20) unsigned
 ,`osztalyId` bigint(20) unsigned
 ,`tanarId` bigint(20) unsigned
-,`nev` varchar(255)
-,`kod` varchar(255)
+,`tanarnev` varchar(255)
+,`tanarkod` varchar(255)
+,`email` varchar(255)
 ,`hetnapja` bigint(20) unsigned
+,`evfolyam` bigint(20) unsigned
 ,`megnevezes` varchar(255)
+,`csoport` enum('TRUE','FALSE')
+,`osztalyfonokId` bigint(20) unsigned
 ,`teremkod` varchar(255)
+,`projektor` enum('TRUE','FALSE')
+,`infotrerem` enum('TRUE','FALSE')
+,`ferohely` int(3) unsigned
 ,`tantargyneve` varchar(255)
 ,`tantargykod` varchar(255)
 );
@@ -1663,7 +1672,7 @@ INSERT INTO `terem` (`teremId`, `teremkod`, `projektor`, `infotrerem`, `ferohely
 --
 DROP TABLE IF EXISTS `tanorak`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `tanorak`  AS SELECT `t`.`tantargyId` AS `tantargyId`, `t`.`oraszam` AS `oraszam`, `t`.`teremId` AS `teremId`, `t`.`osztalyId` AS `osztalyId`, `t`.`tanarId` AS `tanarId`, `ta`.`nev` AS `nev`, `ta`.`kod` AS `kod`, `t`.`hetnapja` AS `hetnapja`, `o`.`megnevezes` AS `megnevezes`, `r`.`teremkod` AS `teremkod`, `tg`.`tantargyneve` AS `tantargyneve`, `tg`.`tantargykod` AS `tantargykod` FROM ((((`tanora` `t` join `tanar` `ta` on(`t`.`tanarId` = `ta`.`tanarId`)) join `osztalyok` `o` on(`t`.`osztalyId` = `o`.`osztalyId`)) join `terem` `r` on(`t`.`teremId` = `r`.`teremId`)) join `tantargy` `tg` on(`t`.`tantargyId` = `tg`.`tantargyId`)) ORDER BY `t`.`hetnapja` ASC, `t`.`oraszam` ASC ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `tanorak`  AS SELECT `t`.`tantargyId` AS `tantargyId`, `t`.`oraszam` AS `oraszam`, `t`.`teremId` AS `teremId`, `t`.`osztalyId` AS `osztalyId`, `t`.`tanarId` AS `tanarId`, `ta`.`tanarnev` AS `tanarnev`, `ta`.`tanarkod` AS `tanarkod`, `ta`.`email` AS `email`, `t`.`hetnapja` AS `hetnapja`, `o`.`evfolyam` AS `evfolyam`, `o`.`megnevezes` AS `megnevezes`, `o`.`csoport` AS `csoport`, `o`.`osztalyfonokId` AS `osztalyfonokId`, `r`.`teremkod` AS `teremkod`, `r`.`projektor` AS `projektor`, `r`.`infotrerem` AS `infotrerem`, `r`.`ferohely` AS `ferohely`, `tg`.`tantargyneve` AS `tantargyneve`, `tg`.`tantargykod` AS `tantargykod` FROM ((((`tanora` `t` join `tanar` `ta` on(`t`.`tanarId` = `ta`.`tanarId`)) join `osztalyok` `o` on(`t`.`osztalyId` = `o`.`osztalyId`)) join `terem` `r` on(`t`.`teremId` = `r`.`teremId`)) join `tantargy` `tg` on(`t`.`tantargyId` = `tg`.`tantargyId`)) WHERE `t`.`hetnapja` between 1 and 5 ORDER BY `t`.`hetnapja` ASC, `t`.`oraszam` ASC ;
 
 --
 -- Indexek a kiírt táblákhoz
@@ -1801,7 +1810,6 @@ ALTER TABLE `tanora`
   ADD CONSTRAINT `fk_tanora_tanar` FOREIGN KEY (`tanarId`) REFERENCES `tanar` (`tanarId`),
   ADD CONSTRAINT `fk_tanora_tantargy` FOREIGN KEY (`tantargyId`) REFERENCES `tantargy` (`tantargyId`),
   ADD CONSTRAINT `fk_tanora_terem` FOREIGN KEY (`teremId`) REFERENCES `terem` (`teremId`);
-SET FOREIGN_KEY_CHECKS=1;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

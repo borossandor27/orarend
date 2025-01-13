@@ -22,12 +22,17 @@ class Database
     }
     public function getTanarok()
     {
-        $sql = "SELECT * FROM tanarok";
+        $sql = "SELECT * FROM tanar";
+        return $this->select($sql);
+    }
+    public function getTantermek()
+    {
+        $sql = "SELECT * FROM terem";
         return $this->select($sql);
     }
     public function getTantargyak()
     {
-        $sql = "SELECT * FROM tantargyak";
+        $sql = "SELECT * FROM tantargy";
         return $this->select($sql);
     }
     private function insert($sql)
