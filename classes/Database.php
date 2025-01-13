@@ -35,6 +35,11 @@ class Database
         $sql = "SELECT * FROM tantargy";
         return $this->select($sql);
     }
+    public function getTanerOrarend($tanarId)
+    {
+        $sql = "SELECT * FROM `tanorak` WHERE tanarId = $tanarId";
+        return $this->select($sql);
+    }
     private function insert($sql)
     {
         if ($this->conn->query($sql) === TRUE) {
