@@ -43,6 +43,11 @@ class Database
             return false;
         }
     }
+    public function getEsemenyek()
+    {
+        $sql = "SELECT * FROM esemeny";
+        return $this->select($sql);
+    }
     public function setEsemeny($tanarId, $tantereId, $kezdet, $veg, $leiras)
     {
         $sql = "INSERT INTO `esemeny` (`erintettTanarId`, `erintettTeremId`, `kezdete`, `vege`, `megjegyzes`) VALUES ('$tanarId', '$tantereId', '$kezdet', '$veg', '$leiras')";

@@ -1,14 +1,14 @@
 CREATE OR REPLACE VIEW tanorak AS
 SELECT 
-  t.tantargyId,
+  t.hetnapja,
   t.oraszam,
+  t.tantargyId,
   t.teremId,
   t.osztalyId,
   t.tanarId,
   ta.tanarnev,
   ta.tanarkod,
   ta.email,
-  t.hetnapja,
   o.evfolyam,
   o.megnevezes,
   o.csoport,
